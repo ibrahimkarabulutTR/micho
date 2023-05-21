@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="https://micho-app.com/static/images/icons/anchor.svg" sizes="32x32">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+	<link rel="shortcut icon" type="image/jpg" href="https://micho-app.com/static/images/logo/romano-logo1.svg"
+		https://micho-app.com />
+	<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
+	<!--danger-->
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+		type="text/css" />
+	<link href="https://micho-app.com/static/lib/global_assets/css/icons/fontawesome/styles.min.css" rel="stylesheet"
+		type="text/css">
+	<link href="https://micho-app.com/static/lib/global_assets/css/extras/animate.min.css" rel="stylesheet"
+		type="text/css">
+	<link href="https://micho-app.com/static/lib/global_assets/css/extras/jquery-ui.min.css" rel="stylesheet"
+		type="text/css">
+	<link href="https://micho-app.com/static/lib/global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet"
+		type="text/css" />
+	<!-- /global stylesheets -->
+	<!-- Main CSS file -->
+	<link rel="stylesheet" href="https://micho-app.com/static/css/layout/main/main.css" />
+
+	<link rel="stylesheet" href="https://micho-app.com/static/lib/light/css/all.min.css" type="text/css">
+
+	<!-- /Main CSS file -->
+
+	<!-- Core JS files -->
+	<script src="https://micho-app.com/static/lib/global_assets/js/main/jquery.min.js"></script>
+	<script src="https://micho-app.com/static/lib/global_assets/js/main/jquery-ui.min.js"></script>
+	<script src="https://micho-app.com/static/lib/global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<!-- /core JS files -->
+
+	<!--Plugins-->
+	<script src="https://micho-app.com/static/lib/global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
+
+	<!--/plugins-->
+
+
+	<script src="https://micho-app.com/static/lib/light/js/app.js"></script>
+
+
+	<!--Demo_pages-->
+
+	<!--/demo_pages-->
+
+	<script src="https://micho-app.com/static/lib/global_assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	<script>
+		const add_svg_src = "https://micho-app.com/static/images/icons/add.svg";
+		const info_svg_src = "https://micho-app.com/static/images/icons/info.svg";
+		const edit_svg_src = "https://micho-app.com/static/images/icons/edit.svg";
+		const editing_svg_src = "https://micho-app.com/static/images/icons/editing.svg";
+		const cancel_svg_src = "https://micho-app.com/static/images/icons/cancel.svg";
+		const exit_svg_src = "https://micho-app.com/static/images/icons/exit.svg";
+		const list_svg_src = "https://micho-app.com/static/images/icons/list.svg";
+		const list_v2_svg_src = "https://micho-app.com/static/images/icons/list_v2.svg";
+
+	</script>
+	<script src="https://micho-app.com/static/js/components/alert.js"></script>
+	<script src="https://micho-app.com/static/js/components/buttons.js"></script>
+	<script src="https://micho-app.com/static/js/actions/request.js"></script>
+	<!--/danger-->
+
+	<title>Dashboard - MichoApp</title>
+
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/google-palette/1.1.0/palette.min.js"
+		integrity="sha512-+rKeqfKuzCrzOolK5cPvYqzEHJTEPWG1MTvH02P+MYgmw7uMyNiewzvzlPj0wOgPd10jdNAtkf8tL1aQt7RsxQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+		integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+		integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+		integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Chart.js -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.min.js"
+		integrity="sha512-GCiwmzA0bNGVsp1otzTJ4LWQT2jjGJENLGyLlerlzckNI30moi2EQT0AfRI7fLYYYDKR+7hnuh35r3y1uJzugw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+
+	<!--DataTables-->
+	<link href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+	<link href="https://cdn.datatables.net/searchpanes/2.1.1/css/searchPanes.dataTables.min.css" rel="stylesheet" />
+	<link href="https://cdn.datatables.net/select/1.6.0/css/select.dataTables.min.css" rel="stylesheet" />
+
+	<!--HTMX-->
+	<script src="https://unpkg.com/htmx.org@1.8.5"></script>
+
+
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+	<!-- Logout Modal -->
+	<div class="modal fade" id="logoutModalCenter" tabindex="-1" role="dialog" aria-labelledby="logoutModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="logoutModalLongTitle">Çıkış Yapılsın mı?</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+
+					</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+					<a class="btn btn-danger" href="https://micho-app.com/user/logout">Çıkış Yap</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Add/Update Data Modal X-Large-->
+	<div id="addUpdateDataModalXl" class="modal fade" tabindex="-1">
+		<div id="addUpdateDataDialogXl" class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+			hx-target="this"></div>
+	</div>
+
+	<!-- Add/Update Data Modal X-Large / Redirect-->
+	<div id="addUpdateDataModalXl-r" class="modal fade" tabindex="-1">
+		<div id="addUpdateDataDialogXl-r" class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+			hx-target="this"></div>
+	</div>
+
+	<!-- Add/Update Data Modal Small-->
+	<div id="addUpdateDataModal" class="modal fade smallModal" tabindex="-1">
+		<div id="addUpdateDataDialog" class="modal-dialog" hx-target="this"></div>
+	</div>
+
+	<!-- Add/Update Data Modal Small / Redirect-->
+	<div id="addUpdateDataModal-r" class="modal fade smallModal" tabindex="-1">
+		<div id="addUpdateDataDialog-r" class="modal-dialog" hx-target="this"></div>
+	</div>
+
+
+	<!--Delete Data Modal-->
+
+	<div class="sidebarContainer">
+		<div class="sidebarv3">
+			<div class="logo_content">
+				<div class="logo">
+					<!-- <i class='bx bxl-c-plus-plus'></i> -->
+					<img id="logo-navbar" src="https://micho-app.com/static/images/landing/logo-light.png" style="width: 40px;">
+					<!-- <div class="logo_name">
+					Maxima
+				</div> -->
+				</div>
+
+			</div>
+			<ul class="nav_list" style="list-style-type: none; padding-left: 0px;">
+				<!-- <li>
+				<i class='bx bx-search' ></i>
+				<input type="text" placeholder="Ara">
+				<span class="tooltipv2">Ara</span>
+			</li> -->
+				<li>
+					<a href="https://micho-app.com/" class="dashboard">
+						<i class="bi bi-grid"></i>
+						<span class="links_name">Dashboard</span>
+					</a>
+					<span class="tooltipv2">Dashboard</span>
+				</li>
+				<!-- <li>
+				<a href="" class="cards">
+					<i class="fa-solid fa-clipboard"></i>
+					<span class="links_name">Cards</span>
+				</a>
+				<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+					<li class="nav-item"><a href="" class="nav-link"></a></li>
+				</ul>
+				<span class="tooltipv2">Cards</span>
+			</li> -->
+
+				<li class="li-submenu">
+					<a href="#" class="cards-up upMenu">
+						<i class="bi bi-window-stack"></i>
+						<span class="links_name">Cards</span>
+						<i class="fa-solid fa-chevron-right" id="downMenu"></i>
+					</a>
+					<ul class="nav-list sub-menu">
+						<li>
+							<a href="https://micho-app.com/card/card_data/" class="cards">
+								<i class="fa-solid fa-building"></i>
+								<span class="links_name">Companies</span>
+							</a>
+						</li>
+						<li>
+							<a href=/card/vessel_data/ class="vessels">
+								<i class="fa-solid fa-ship"></i>
+								<span class="links_name">Vessels</span>
+							</a>
+						</li>
+					</ul>
+					<span class="tooltipv2">Cards</span>
+				</li>
+
+				<li class="li-submenu">
+					<a href="#" class="data-up upMenu">
+						<i class="bi bi-clipboard-data"></i>
+						<span class="links_name">Data</span>
+						<i class="fa-solid fa-chevron-right" id="downMenu"></i>
+					</a>
+					<ul class="nav-list sub-menu">
+						<li>
+							<a href="https://micho-app.com/data/maker_data/" class="makers">
+								<i class="fa-solid fa-folder"></i>
+								<span class="links_name">Makers</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="parts">
+								<i class="fa-solid fa-screwdriver-wrench"></i>
+								<span class="links_name">Parts</span>
+							</a>
+						</li>
+					</ul>
+					<span class="tooltipv2">Cards</span>
+				</li>
+
+				<li>
+					<a href="" class="expenses">
+
+						<i class="bi bi-postcard"></i>
+						<span class="links_name">HR</span>
+					</a>
+					<span class="tooltipv2">HR</span>
+				</li>
+				<li>
+					<a href="" class="finances">
+						<i class="bi bi-graph-up"></i>
+						<span class="links_name">Finance</span>
+					</a>
+					<span class="tooltipv2">Finance</span>
+				</li>
+				<li>
+					<a href="" class="reports">
+						<i class="bi bi-bar-chart-line"></i>
+						<span class="links_name">Report</span>
+					</a>
+					<span class="tooltipv2">Reports</span>
+				</li>
+				<li>
+					<a href="">
+						<i class="bi bi-chat-left-text"></i>
+						<span class="links_name">Messages</span>
+					</a>
+					<span class="tooltipv2">Messages</span>
+				</li>
+				<li>
+					<a href="" class="settings">
+						<i class="bi bi-gear"></i>
+						<span class="links_name">Settings</span>
+					</a>
+					<span class="tooltipv2">Settings</span>
+				</li>
+			</ul>
+			<div class="profile_content">
+				<div class="profile">
+					<div class="profile_details">
+
+						<img src="https://micho-app.com/static/images/icons/user-default.png" alt="avatar"
+							class="rounded-circle mr-2 profile-image" height="34">
+
+						<div class="name_job">
+							<div class="name">testuser</div>
+							<div class="job">
+
+							</div>
+						</div>
+					</div>
+					<a class="logoutButton" title="Çıkış Yap" data-bs-toggle="modal" data-bs-target="#logoutModalCenter">
+						<i class='bx bx-log-out' id="log_out"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+
+	</script>
+
+
+	<section class="home-section">
+
+
+
+
+
+
+
+		<!-- StyleSheet-->
+		<link rel="stylesheet" href="header.css">
+		<!-- /StyleSheet End-->
+
+		<!-- Main navbar -->
+		<div class="navbar navbar-expand-md navbar-light fixed-top" style="position: sticky; padding: 0;">
+			<div class="navbar-brand text-lg-left p-0">
+				<div style="padding: 0 15px;display:flex;">
+
+
+					<i class='fa-solid fa-bars' id="btnmenu"></i>
+					<span style="margin-left:60px;">Dashboard</span>
+				</div>
+			</div>
+
+			<div class="d-md-none">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+					<i class="bi bi-three-dots-vertical"></i>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-mobile">
+				<span class="my-3 my-md-0 ml-md-3 mr-md-auto">&nbsp;</span>
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown language-switch">
+						<a class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+							<i class="bi bi-translate" style="font-size:22px;"></i>
+							<span class="d-md-none ml-2">Language</span>
+						</a>
+						<div class="dropdown-menu drop_menu_animation_half_second">
+							<a href="?lng=en" class="dropdown-item english">
+								<img src="https://micho-app.com/static/lib/global_assets/images/lang/gb.png" height="22"
+									class="img-flag" alt="">
+								English
+							</a>
+							<a href="?lng=es" class="dropdown-item turkish">
+								<img src="https://micho-app.com/static/lib/global_assets/images/lang/tr.png" height="22"
+									class="img-flag" alt="">
+								Turkish
+							</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+							<i class="bi bi-person-check" style="font-size:22px;"></i>
+							<span class="d-md-none ml-2">Users</span>
+						</a>
+
+						<div class="dropdown-menu drop_menu_animation_half_second dropdown-menu-right dropdown-content wmin-md-300">
+							<div class="dropdown-content-header">
+								<span class="font-weight-semibold">Users online</span>
+								<a href="#" class="text-default"><i class="icon-search4 font-size-base"></i></a>
+							</div>
+
+							<div class="dropdown-content-body dropdown-scrollable">
+								<ul class="media-list">
+									<li class="media">
+										<div class="mr-3">
+											<img src="https://micho-app.com/static/lib/global_assets/images/placeholders/placeholder.jpg"
+												width="36" height="36" class="rounded-circle" alt="">
+										</div>
+										<div class="media-body">
+											<a href="#" class="media-title text-white font-weight-semibold">Jordana
+												Ansley</a>
+											<span class="d-block text-muted font-size-sm">Lead web developer</span>
+										</div>
+										<div class="ml-3 align-self-center"><span class="badge badge-mark border-success"></span></div>
+									</li>
+
+									<li class="media">
+										<div class="mr-3">
+											<img src="https://micho-app.com/static/lib/global_assets/images/placeholders/placeholder.jpg"
+												width="36" height="36" class="rounded-circle" alt="">
+										</div>
+										<div class="media-body">
+											<a href="#" class="media-title text-white font-weight-semibold">Will
+												Brason</a>
+											<span class="d-block text-muted font-size-sm">Marketing manager</span>
+										</div>
+										<div class="ml-3 align-self-center"><span class="badge badge-mark border-danger"></span>
+										</div>
+									</li>
+
+									<li class="media">
+										<div class="mr-3">
+											<img src="https://micho-app.com/static/lib/global_assets/images/placeholders/placeholder.jpg"
+												width="36" height="36" class="rounded-circle" alt="">
+										</div>
+										<div class="media-body">
+											<a href="#" class="media-title text-white font-weight-semibold">Hanna
+												Walden</a>
+											<span class="d-block text-muted font-size-sm">Project manager</span>
+										</div>
+										<div class="ml-3 align-self-center"><span class="badge badge-mark border-success"></span></div>
+									</li>
+
+									<li class="media">
+										<div class="mr-3">
+											<img src="https://micho-app.com/static/lib/global_assets/images/placeholders/placeholder.jpg"
+												width="36" height="36" class="rounded-circle" alt="">
+										</div>
+										<div class="media-body">
+											<a href="#" class="media-title text-white font-weight-semibold">Dori
+												Laperriere</a>
+											<span class="d-block text-muted font-size-sm">Business developer</span>
+										</div>
+										<div class="ml-3 align-self-center"><span class="badge badge-mark border-warning-300"></span></div>
+									</li>
+
+									<li class="media">
+										<div class="mr-3">
+											<img src="https://micho-app.com/static/lib/global_assets/images/placeholders/placeholder.jpg"
+												width="36" height="36" class="rounded-circle" alt="">
+										</div>
+										<div class="media-body">
+											<a href="#" class="media-title text-white font-weight-semibold">Vanessa
+												Aurelius</a>
+											<span class="d-block text-muted font-size-sm">UX expert</span>
+										</div>
+										<div class="ml-3 align-self-center"><span class="badge badge-mark border-grey-400"></span></div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="dropdown-content-footer">
+								<a href="#" class="text-white mr-auto">All users</a>
+								<a href="#" class="text-white"><i class="icon-gear"></i></a>
+							</div>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+
+
+							<i class="bi bi-bell" style="font-size:22px;"></i>
+
+
+							<span class="d-md-none ml-2">Notifications</span>
+						</a>
+
+						<div class="dropdown-menu drop_menu_animation_half_second dropdown-menu-right dropdown-content wmin-md-350">
+							<div class="dropdown-content-header">
+								<h6 class="card-title">Notifications</h6>
+							</div>
+
+							<div class="dropdown-content-body dropdown-scrollable">
+								<ul class="media-list">
+
+
+									<li class="media">
+										<div class="mr-3">
+											<a href="#" class="btn btn-outline-primary rounded-pill border-2 btn-icon m-1">
+												<i class="icon-warning"></i>
+											</a>
+										</div>
+
+										<div class="media-body ">
+											There is no notification. A sales projects' quotation must has been created
+											two weeks ago.
+										</div>
+									</li>
+
+
+
+
+
+								</ul>
+							</div>
+
+							<!-- <div class="dropdown-content-footer justify-content-center p-0">
+						<a href="#" class="text-muted w-100 py-2" data-popup="tooltip" title="Load more"><i
+								class="icon-menu7 d-block top-0"></i></a>
+					</div> -->
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+
+							<i class="bi bi-person-circle" style="font-size:22px;"></i>
+						</a>
+
+						<div class="dropdown-menu drop_menu_animation_half_second dropdown-menu-right">
+							<a href="https://micho-app.com/user/profile/" class="dropdown-item"><i class="icon-user-plus"></i> My
+								profile</a>
+							<a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
+							<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span
+									class="badge badge-pill bg-blue ml-auto">58</span></a>
+							<div class="dropdown-divider"></div>
+							<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
+							<a href="https://micho-app.com/logout/" class="dropdown-item"><i class="icon-switch2"></i>
+								Logout</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /main navbar -->
+
+
+
+		<script>
+			let moon = "https://micho-app.com/static/images/icons/moon.svg";
+			let sun = "https://micho-app.com/static/images/icons/sun.svg";
+		</script>
+		<script src="https://micho-app.com/static/js/components/aside.js"></script>
+
+
+		<div class="home-content">
+
+
+
+
+
+
+
+			<div class="overview-boxes">
+				<div class="box">
+					<div class="d-flex gap-2">
+						<i class="bi bi-wallet2 cart two"></i>
+						<div class="left-side">
+							<div class="number">$ 0.00</div>
+						</div>
+					</div>
+					<div class="d-flex flex-column gap-2">
+						<div class="box-topic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+						<div class="indicator">
+							<i class="bx bx-down-arrow-alt"></i>
+							<span class="text">Lower than last month</span>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="d-flex gap-2">
+						<i class="bi bi-node-minus cart two"></i>
+						<div class="left-side">
+							<div class="number">$ 0.00</div>
+						</div>
+					</div>
+					<div class="d-flex flex-column gap-2">
+						<div class="box-topic">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+						<div class="indicator">
+							<i class="bx bx-down-arrow-alt"></i>
+							<span class="text">Lower than last month</span>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="d-flex gap-2">
+						<i class="bi bi-exclude cart two"></i>
+						<div class="left-side">
+							<div class="number">$ 0.00</div>
+						</div>
+					</div>
+					<div class="d-flex flex-column gap-2">
+						<div class="box-topic">Lorem ipsum dolor sit amet consectetur.</div>
+						<div class="indicator">
+							<i class="bx bx-down-arrow-alt"></i>
+							<span class="text">Lower than last month</span>
+						</div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="d-flex gap-2">
+						<i class="bi bi-input-cursor cart two"></i>
+						<div class="left-side">
+							<div class="number">$ 0.00</div>
+						</div>
+					</div>
+					<div class="d-flex flex-column gap-2">
+						<div class="box-topic">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+						<div class="indicator">
+							<i class="bx bx-down-arrow-alt"></i>
+							<span class="text">Lower than last month</span>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="box">
+					<div class="left-side">
+						<div class="box-topic">Upcoming events</div>
+						<div class="rowBlock">Meeting with xyz company - 20.05.2023</div>
+						<div class="rowBlock">Meeting with account - 21.05.2023</div>
+						<div class="rowBlock">Meeting with IT - 22.05.2023</div>
+						<div class="rowBlock"><a class="seeAllButton" href="">See All</a></div>
+					</div>
+				</div>
+				<div class="box">
+					<div class="right-side">
+						<div class="box-topic">Pending approval</div>
+						<div class="rowBlock">Invoice 00865479</div>
+						<div class="rowBlock">Maker type 2647125894</div>
+						<div class="rowBlock">Offer 11125474</div>
+						<div class="rowBlock"><a class="seeAllButton" href="">See All</a></div>
+					</div>
+					<i class="bx bxs-cart cart three"></i>
+				</div>
+				<div class="box">
+		<div class="left-side">
+			<div class="box-topic">Haftalık Satış</div>
+			<div class="number">279</div>
+			<div class="indicator">
+				<i class="bx bx-down-arrow-alt down"></i>
+				<span class="text">Geçen haftadan daha düşük</span>
+			</div>
+		</div>
+		<i class="bx bxs-cart-download cart four"></i>
+	</div> -->
+			</div>
+
+
+			<main class="mt-3">
+
+				<div class="container-fluid">
+					<div class="row">
+						<!-- column -->
+						<div class="col-sm-12 col-lg-4">
+							<div class="card card-hover">
+								<div class="card-body">
+									<div class="d-flex">
+										<div class="mr-4">
+											<small>Wallet Balance</small>
+											<h4 class="mb-0">$3,567.53</h4>
+										</div>
+										<div class="chart ml-auto">
+											asdfadf
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-sm-12 col-lg-4">
+							<div class="card card-hover bg-red">
+								<div class="card-body">
+									<div class="d-flex">
+										<div class="mr-4">
+											<small>Wallet Balance</small>
+											<h4 class="mb-0">$3,567.53</h4>
+										</div>
+										<div class="chart ml-auto">
+											asdfadf
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-sm-12 col-lg-4">
+							<div class="card card-hover bg-green">
+								<div class="card-body">
+									<div class="d-flex">
+										<div class="mr-4">
+											<small>Wallet Balance</small>
+											<h4 class="mb-0">$3,567.53</h4>
+										</div>
+										<div class="chart ml-auto">
+											asdfadf
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="card-body">
+									<!-- title -->
+									<div class="d-md-flex align-items-center">
+										<div>
+											<h4 class="card-title">Top Selling Products</h4>
+											<p class="card-subtitle">Overview of Top Selling Items</p>
+										</div>
+										<div class="ml-auto">
+											<div class="dl">
+												<select class="custom-select">
+													<option value="0" selected="">Monthly</option>
+													<option value="1">Daily</option>
+													<option value="2">Weekly</option>
+													<option value="3">Yearly</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<!-- title -->
+								</div>
+								<div class="table-responsive">
+									<table class="table v-middle">
+										<thead>
+											<tr class="bg-light">
+												<th class="border-top-0">Products</th>
+												<th class="border-top-0">License</th>
+												<th class="border-top-0">Support Agent</th>
+												<th class="border-top-0">Sales</th>
+												<th class="border-top-0">Earnings</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="m-r-10"><a class="btn btn-circle p-2 btn-info text-white">EA</a></div>
+														<div class="">
+															<h6 class="m-b-0 font-16 ms-3">Elite Admin</h6>
+														</div>
+													</div>
+												</td>
+												<td>Single Use</td>
+												<td>John Doe</td>
+												<td>356</td>
+												<td>
+													<h5 class="m-b-0">$2850.06</h5>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="m-r-10"><a class="btn btn-circle p-2 btn-warning text-white">MA</a></div>
+														<div class="">
+															<h6 class="m-b-0 ms-3 font-16">Monster Admin</h6>
+														</div>
+													</div>
+												</td>
+												<td>Single Use</td>
+												<td>Venessa Fern</td>
+												<td>356</td>
+												<td>
+													<h5 class="m-b-0">$2850.06</h5>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="m-r-10"><a class="btn btn-circle p-2 btn-success text-white">MP</a></div>
+														<div class="">
+															<h6 class="m-b-0 ms-3 font-16">Material Pro Admin</h6>
+														</div>
+													</div>
+												</td>
+												<td>Single Use</td>
+												<td>John Doe</td>
+												<td>356</td>
+												<td>
+													<h5 class="m-b-0">$2850.06</h5>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="m-r-10"><a class="btn btn-circle p-2 btn-primary text-white">AA</a></div>
+														<div class="">
+															<h6 class="m-b-0 ms-3 font-16">Ample Admin</h6>
+														</div>
+													</div>
+												</td>
+												<td>Single Use</td>
+												<td>John Doe</td>
+												<td>356</td>
+												<td>
+													<h5 class="m-b-0">$2850.06</h5>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-lg-6">
+							<div class="card card-hover">
+								<div class="card-body">
+									<div class="table-responsive">
+										<h4 class="card-title">Recent Comments</h4>
+										<table class="table table-striped table-hover table-borderless table-vcenter font-size-sm">
+											<thead>
+												<tr class="text-uppercase">
+													<th class="font-w700">Product</th>
+													<th class="d-none d-sm-table-cell font-w700">Date</th>
+													<th class="font-w700">State</th>
+													<th class="d-none d-sm-table-cell font-w700 text-right" style="width: 120px;">Price</th>
+													<th class="font-w700 text-center" style="width: 60px;"></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<span class="font-w600">iPhone X</span>
+													</td>
+													<td class="d-none d-sm-table-cell">
+														<span class="font-size-sm text-muted">today</span>
+													</td>
+													<td>
+														<span class="font-w600 text-warning">Pending..</span>
+													</td>
+													<td class="d-none d-sm-table-cell text-right">
+														$999,99
+													</td>
+													<td class="text-center">
+														<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title=""
+															class="js-tooltip-enabled" data-original-title="Manage">
+															<i class="fa fa-fw fa-pencil-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="font-w600">MacBook Pro 15"</span>
+													</td>
+													<td class="d-none d-sm-table-cell">
+														<span class="font-size-sm text-muted">today</span>
+													</td>
+													<td>
+														<span class="font-w600 text-warning">Pending..</span>
+													</td>
+													<td class="d-none d-sm-table-cell text-right">
+														$2.299,00
+													</td>
+													<td class="text-center">
+														<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title=""
+															class="js-tooltip-enabled" data-original-title="Manage">
+															<i class="fa fa-fw fa-pencil-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="font-w600">Nvidia GTX 1080 Ti</span>
+													</td>
+													<td class="d-none d-sm-table-cell">
+														<span class="font-size-sm text-muted">today</span>
+													</td>
+													<td>
+														<span class="font-w600 text-warning">Pending..</span>
+													</td>
+													<td class="d-none d-sm-table-cell text-right">
+														$1200,00
+													</td>
+													<td class="text-center">
+														<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title=""
+															class="js-tooltip-enabled" data-original-title="Manage">
+															<i class="fa fa-fw fa-pencil-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="font-w600">Playstation 4 Pro</span>
+													</td>
+													<td class="d-none d-sm-table-cell">
+														<span class="font-size-sm text-muted">today</span>
+													</td>
+													<td>
+														<span class="font-w600 text-danger">Cancelled</span>
+													</td>
+													<td class="d-none d-sm-table-cell text-right">
+														$399,00
+													</td>
+													<td class="text-center">
+														<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title=""
+															class="js-tooltip-enabled" data-original-title="Manage">
+															<i class="fa fa-fw fa-pencil-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="font-w600">Nintendo Switch</span>
+													</td>
+													<td class="d-none d-sm-table-cell">
+														<span class="font-size-sm text-muted">yesterday</span>
+													</td>
+													<td>
+														<span class="font-w600 text-success">Completed</span>
+													</td>
+													<td class="d-none d-sm-table-cell text-right">
+														$349,00
+													</td>
+													<td class="text-center">
+														<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title=""
+															class="js-tooltip-enabled" data-original-title="Manage">
+															<i class="fa fa-fw fa-pencil-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="font-w600">iPhone X</span>
+													</td>
+													<td class="d-none d-sm-table-cell">
+														<span class="font-size-sm text-muted">yesterday</span>
+													</td>
+													<td>
+														<span class="font-w600 text-success">Completed</span>
+													</td>
+													<td class="d-none d-sm-table-cell text-right">
+														$999,00
+													</td>
+													<td class="text-center">
+														<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title=""
+															class="js-tooltip-enabled" data-original-title="Manage">
+															<i class="fa fa-fw fa-pencil-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="font-w600">Echo Dot</span>
+													</td>
+													<td class="d-none d-sm-table-cell">
+														<span class="font-size-sm text-muted">yesterday</span>
+													</td>
+													<td>
+														<span class="font-w600 text-success">Completed</span>
+													</td>
+													<td class="d-none d-sm-table-cell text-right">
+														$39,99
+													</td>
+													<td class="text-center">
+														<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title=""
+															class="js-tooltip-enabled" data-original-title="Manage">
+															<i class="fa fa-fw fa-pencil-alt"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<span class="font-w600">Xbox One X</span>
+													</td>
+													<td class="d-none d-sm-table-cell">
+														<span class="font-size-sm text-muted">yesterday</span>
+													</td>
+													<td>
+														<span class="font-w600 text-success">Completed</span>
+													</td>
+													<td class="d-none d-sm-table-cell text-right">
+														$499,00
+													</td>
+													<td class="text-center">
+														<a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title=""
+															class="js-tooltip-enabled" data-original-title="Manage">
+															<i class="fa fa-fw fa-pencil-alt"></i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-lg-6">
+							<div class="card has-shadow">
+								<div class="card-body border-top">
+									<h4 class="card-title">Stocks</h4>
+									<table class="table mb-0">
+										<tbody>
+											<tr>
+												<td>APPL</td>
+												<td>$ 9,500</td>
+												<td class="color-green">+ 458</td>
+											</tr>
+											<tr>
+												<td>GOOG</td>
+												<td>$ 15,425</td>
+												<td class="color-red">- 1,632</td>
+											</tr>
+											<tr>
+												<td>AMD</td>
+												<td>$ 11,540</td>
+												<td class="color-green">+ 8,326</td>
+											</tr>
+											<tr>
+												<td>HGM</td>
+												<td>$ 15,855</td>
+												<td class="color-green">+ 11,326</td>
+											</tr>
+											<tr>
+												<td>MKR</td>
+												<td>$ 18,500</td>
+												<td class="color-red">- 6,586</td>
+											</tr>
+											<tr>
+												<td>APPL</td>
+												<td>$ 9,500</td>
+												<td class="color-green">+ 458</td>
+											</tr>
+											<tr>
+												<td>GOOG</td>
+												<td>$ 15,425</td>
+												<td class="color-red">- 1,632</td>
+											</tr>
+											<tr>
+												<td>AMD</td>
+												<td>$ 11,540</td>
+												<td class="color-green">+ 8,326</td>
+											</tr>
+											<tr>
+												<td>HGM</td>
+												<td>$ 15,855</td>
+												<td class="color-green">+ 11,326</td>
+											</tr>
+											<tr>
+												<td>MKR</td>
+												<td>$ 18,500</td>
+												<td class="color-red">- 6,586</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="card-body">
+									<div class="table-responsive">
+										<h4 class="card-title">Recent Comments</h4>
+										<table class="table">
+											<thead>
+												<tr>
+													<th>Image</th>
+													<th>Product</th>
+													<th>Customer</th>
+													<th>Purchased On</th>
+													<th>Status</th>
+													<th>Tracking No#</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<img src="https://bootadmin.org/images/icons/lulu/Desktop.png" style="width:50px" alt="iMac">
+													</td>
+													<td>iMac</td>
+													<td>Russell</td>
+													<td>22/08/2018</td>
+													<td>
+														<span class="badge badge-success font-weight-100">Paid</span>
+													</td>
+													<td>#98BC85SD84</td>
+												</tr>
+												<tr>
+													<td>
+														<img src="https://bootadmin.org/images/icons/lulu/Mobile.png" style="width:50px" alt="iPhone">
+													</td>
+													<td>iPhone</td>
+													<td>Carol</td>
+													<td>15/07/2018</td>
+													<td>
+														<span class="badge badge-warning font-weight-100">Pending</span>
+													</td>
+													<td>#98SA3C9SC</td>
+												</tr>
+												<tr>
+													<td>
+														<img src="https://bootadmin.org/images/icons/lulu/Clock.png" style="width:50px"
+															alt="apple_watch">
+													</td>
+													<td>Apple Watch</td>
+													<td>Austin Pena</td>
+													<td>10/07/2018</td>
+													<td>
+														<span class="badge badge-success font-weight-100">Paid</span>
+													</td>
+													<td>#98BC85SD84</td>
+												</tr>
+												<tr>
+													<td>
+														<img src="https://bootadmin.org/images/icons/lulu/Headphones.png" style="width:50px"
+															alt="mac_mouse">
+													</td>
+													<td>Headphones</td>
+													<td>Randy</td>
+													<td>22/04/2018</td>
+													<td>
+														<span class="badge badge-default font-weight-100">Failed</span>
+													</td>
+													<td>#98SA3C9SC</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Footer -->
+				<!-- <footer>
+					<p>&copy; Bootadmin. All Rights Reserved. <br />Designed and Developed by <a href="https://sazzad.me">Sazzad
+							Hossain</a>.</p>
+				</footer> -->
+
+			</main>
+
+			<script>
+				/*Line Chart*/
+				/*const lineChart = document.getElementById('line-chart').getContext('2d');
+				const myLineChart = new Chart(lineChart, {
+					type: 'line',
+					data: {
+						labels: [],
+						datasets: [{
+							label: 'Ciro',
+							data: [],
+							backgroundColor: [
+								'rgba(255, 56, 0, 0.2)',
+							],
+							borderColor: [
+								'#ff3800',
+							],
+							borderWidth: 1
+						}]
+					},
+					options: {
+						scales: {
+							y: {
+								beginAtZero: true
+							},
+							xAxes: [{
+							gridLines: {
+								color: "rgba(0, 0, 0, 0)",
+							}
+						}],
+						yAxes: [{
+							gridLines: {
+								color: "rgba(0, 0, 0, 0.05)",
+							}   
+						}]
+						},
+						legend: {
+							display: false
+						}
+					}
+				});*/
+
+				//bir butona tıklandığında grafik yüklensin isteniyorsa grafik komutlarını bir fonksiyonun içine al ve butona o fonksiyonu ekle
+				const ctxLineChart = document.getElementById('line-chart').getContext('2d');
+				const lineLabels = [];
+				const lineData = [];
+
+				new Chart(ctxLineChart, {
+					type: 'line',
+					data: {
+						labels: lineLabels,
+						datasets: [{
+							label: '',
+							data: lineData,
+							fill: true,
+							backgroundColor: 'rgba(255, 56, 0, 0.2)',
+							borderColor: '#ff3800',
+							borderWidth: 1,
+							tension: 0.5
+						}]
+					},
+					options: {
+						plugins: {
+							legend: {
+								display: false
+							}
+						},
+						scales: {
+							y: {
+								beginAtZero: true,
+								grid: {
+									color: "rgba(0, 0, 0, 0.05)"
+								}
+							},
+							x: {
+								grid: {
+									display: false
+								}
+							}
+						}
+					}
+				});
+
+
+				/*Pie Chart*/
+				/*const pieChart = document.getElementById('pie-chart').getContext('2d');
+				var dataLabels = [];
+				const myPieChart = new Chart(pieChart, {
+					type: 'doughnut',
+					data: {
+						labels: dataLabels,
+						datasets: [{
+							label: '',
+							data: [],
+							backgroundColor: palette(['tol', 'qualitative', 'sequential'], dataLabels.length).map(function(hex) {
+								return '#' + hex;
+								}),
+							hoverOffset: 4
+						}]
+					},
+					options: {
+						responsive: true,
+						maintainAspectRatio: true,
+						aspectRatio: 1.2,
+						legend: {
+							position: 'bottom',
+						}
+					}  
+				});*/
+
+
+				const ctxPieChart = document.getElementById('pie-chart').getContext('2d');
+				const labels = []
+				const data = []
+
+				new Chart(ctxPieChart, {
+					type: 'pie',
+					data: {
+						labels: labels,
+						datasets: [{
+							label: '',
+							data: data,
+							borderWidth: 1,
+							hoverOffset: 4
+						}]
+					},
+					options: {
+						responsive: true,
+						maintainAspectRatio: true,
+						aspectRatio: 1,
+						plugins: {
+							legend: {
+								position: 'bottom'
+							}
+						},
+						scales: {
+							xAxes: [{
+								gridLines: {
+									display: false
+								}
+							}],
+							yAxes: [{
+								gridLines: {
+									display: false
+								}
+							}]
+						}
+					}
+				});
+
+
+
+			</script>
+
+
+		</div>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+
+	<script src="main.js"></script>
+
+	<!-- MDB -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+
+	<!-- DataTables -->
+	<script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+
+	<script type="text/javascript"
+		src="https://cdn.datatables.net/searchpanes/2.1.1/js/dataTables.searchPanes.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/select/1.6.0/js/dataTables.select.min.js"></script>
+	<!-- DataTables Buttons-->
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.4/js/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js"></script>
+
+	<!--danger-->
+	<script>
+		const csrfToken = "YymJ7b8lPebECLeFSU6y9KIBL6clLK3zv98inlaRmTOW6a4jeoeY3DuADlDbP6lz"
+		const profile_theme_api_url = " /api/profile_theme/1"
+		const currentTheme = "light"
+
+		let lightIcon = "https://micho-app.com/static/images/landing/logo-light.png"
+		let darkIcon = "https://micho-app.com/static/images/landing/logo-dark.png";
+	</script>
+	<script src="https://micho-app.com/static/js/layout/functions.js"></script>
+	<script type="module" src="https://micho-app.com/static/js/layout/all.js"></script>
+
+	<!--/danger-->
+
+
+
+
+
+
+
+
+</body>
+
+</html>
